@@ -3,6 +3,7 @@
   border: none;
   padding: 10px 20px;
   cursor: pointer;
+  width: 100%;
 }
 
 .info {
@@ -17,6 +18,14 @@
     margin-bottom: 10px;
     background-color: #f9f9f9;
     color: purple;
+    width: 100%;
+
+    label {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      flex: 1;
+    }
   }
 }
 

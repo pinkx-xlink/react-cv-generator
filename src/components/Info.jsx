@@ -123,12 +123,11 @@ export default function Info() {
       */}
 
       <div className="user-input flex flex-col">
-        <div className="general-info">
-          <h3 className="text-lg font-semibold">General Info</h3>
+        <div className="info-dropdown general-info">
           {/* expand or collapse the "General Info" section on button click using a useState */}
           <button className="expand-btn" onClick={handleEditGeneralInfoClick}>
             {" "}
-            {editGeneralInfo ? "Submit" : "Edit"}{" "}
+            {editGeneralInfo ? "Submit" : "Edit General Info"}{" "}
           </button>
           {editGeneralInfo && (
             <>
@@ -162,11 +161,10 @@ export default function Info() {
           )}
         </div>
 
-        <div className="education-exp">
-          <h3>Educational Experience</h3>
+        <div className="info-dropdown education-exp">
           <button className="expand-btn" onClick={handleEditEducationClick}>
             {" "}
-            {editEducation ? "Submit" : "Edit"}{" "}
+            {editEducation ? "Submit" : "Edit Education"}{" "}
           </button>
           {editEducation && (
             <>
@@ -198,11 +196,10 @@ export default function Info() {
           )}
         </div>
 
-        <div className="practical-exp">
-          <h3>Practical Experience</h3>
+        <div className="info-dropdown practical-exp">
           <button className="expand-btn" onClick={handleEditExperienceClick}>
             {" "}
-            {editExperience ? "Submit" : "Edit"}{" "}
+            {editExperience ? "Submit" : "Edit Work Experience"}{" "}
           </button>
           {editExperience && (
             <>
