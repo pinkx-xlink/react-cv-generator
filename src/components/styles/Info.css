@@ -6,6 +6,9 @@
 }
 
 .info {
+  display: flex;
+  flex-direction: row;
+
   input,
   textarea {
     border: 1px solid #ccc;
@@ -15,4 +18,9 @@
     background-color: #f9f9f9;
     color: purple;
   }
+}
+
+.user-input {
+  display: flex;
+  flex-direction: column;
 }
