@@ -122,7 +122,7 @@ export default function Info() {
       </div>
       */}
 
-      <div className="user-input">
+      <div className="user-input flex flex-col">
         <div className="general-info">
           <h3 className="text-lg font-semibold">General Info</h3>
           {/* expand or collapse the "General Info" section on button click using a useState */}
