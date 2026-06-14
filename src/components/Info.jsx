@@ -127,7 +127,7 @@ export default function Info() {
           {/* expand or collapse the "General Info" section on button click using a useState */}
           <button className="expand-btn" onClick={handleEditGeneralInfoClick}>
             {" "}
-            {editGeneralInfo ? "Submit" : "Edit General Info"}{" "}
+            {editGeneralInfo ? "Submit ✓" : "Edit General Info ↓"}{" "}
           </button>
           {editGeneralInfo && (
             <>
@@ -164,7 +164,7 @@ export default function Info() {
         <div className="info-dropdown education-exp">
           <button className="expand-btn" onClick={handleEditEducationClick}>
             {" "}
-            {editEducation ? "Submit" : "Edit Education"}{" "}
+            {editEducation ? "Submit ✓" : "Edit Education ↓"}{" "}
           </button>
           {editEducation && (
             <>
@@ -199,7 +199,7 @@ export default function Info() {
         <div className="info-dropdown practical-exp">
           <button className="expand-btn" onClick={handleEditExperienceClick}>
             {" "}
-            {editExperience ? "Submit" : "Edit Work Experience"}{" "}
+            {editExperience ? "Submit ✓" : "Edit Work Experience ↓"}{" "}
           </button>
           {editExperience && (
             <>
