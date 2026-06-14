@@ -241,23 +241,27 @@ export default function Info() {
       </div>
 
       {/* THE CV RETURNED USING THE FORM DATA */}
-      <div id="cv-form">
-        <h2>{fullName}</h2>
-        <span>
-          {phoneNumber} {email}{" "}
-        </span>
+      <div className="cv-form">
+        <div className="cv-header">
+          <h2 className="cv-header__title">{fullName}</h2>
+          <span className="cv-header__contact w-full">
+            <p>{phoneNumber}</p> <p>{email}</p>
+          </span>
+        </div>
 
-        <h3>Educational Experience</h3>
-        <p>
-          <b>{schoolName}</b>
-        </p>
-        <p>{fieldOfStudy}</p>
-        <p>{yearsOfStudy}</p>
-        <h3>Practical Experience</h3>
-        <p>{companyName}</p>
-        <p>{positionTitle}</p>
-        <p>Responsibilities:</p>
-        <li>{responsibilities}</li>
+        <div className="cv-form-body">
+          <h3>Educational Experience</h3>
+          <p>
+            <b>{schoolName}</b>
+          </p>
+          <p>{fieldOfStudy}</p>
+          <p>{yearsOfStudy}</p>
+          <h3>Practical Experience</h3>
+          <p>{companyName}</p>
+          <p>{positionTitle}</p>
+          <p>Responsibilities:</p>
+          <li>{responsibilities}</li>
+        </div>
       </div>
     </div>
   );
