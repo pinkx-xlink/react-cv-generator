@@ -1,0 +1,10 @@
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+textarea {
+  height: 200px;
+  margin-bottom: 20px;
+}
