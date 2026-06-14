@@ -99,11 +99,6 @@ export default function Info() {
   }
   return (
     <div className="info">
-      <header className="header">
-        <h1 className="text-2xl font-bold">CV Creator Project</h1>
-        <p>Enter your info and we'll take care of the rest!</p>
-      </header>
-
       {/* THIS IS THE OLD INPUT FIELDS LIST */}
       {/*
       <div className="buttons-and-input-container">
