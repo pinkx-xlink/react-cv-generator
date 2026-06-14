@@ -2,6 +2,7 @@ import { useState, useReducer } from "react";
 // import Text from "./Text";
 // import InputFieldsList from "./InputFieldsList";
 import infoReducer, { initialState } from "./infoReducer";
+import "./styles/Info.css";
 
 const inputFields = [
   { id: 0, name: "General Info" },
@@ -99,7 +100,7 @@ export default function Info() {
   return (
     <div className="info">
       <header className="header">
-        <h1>CV Creator Project</h1>
+        <h1 className="text-2xl font-bold">CV Creator Project</h1>
         <p>Enter your info and we'll take care of the rest!</p>
       </header>
 
@@ -128,88 +129,116 @@ export default function Info() {
 
       <div className="user-input">
         <div className="general-info">
-          <h3>General Info</h3>
+          <h3 className="text-lg font-semibold">General Info</h3>
           {/* expand or collapse the "General Info" section on button click using a useState */}
-          <button onClick={handleEditGeneralInfoClick}>
+          <button className="expand-btn" onClick={handleEditGeneralInfoClick}>
             {" "}
             {editGeneralInfo ? "Submit" : "Edit"}{" "}
           </button>
           {editGeneralInfo && (
             <>
-              <label>
-                First name:{" "}
-                <input value={firstName} onChange={handleFirstNameChange} />
-              </label>
-              <label>
-                Last name:{" "}
-                <input value={lastName} onChange={handleLastNameChange} />
-              </label>
-              <label>
-                Email: <input value={email} onChange={handleEmailChange} />
-              </label>
-              <label>
-                Phone number:{" "}
-                <input value={phoneNumber} onChange={handlePhoneNumberChange} />
-              </label>
+              <div className="input__container">
+                <label>
+                  First name:{" "}
+                  <input value={firstName} onChange={handleFirstNameChange} />
+                </label>
+              </div>
+              <div className="input__container">
+                <label>
+                  Last name:{" "}
+                  <input value={lastName} onChange={handleLastNameChange} />
+                </label>
+              </div>
+              <div className="input__container">
+                <label>
+                  Email: <input value={email} onChange={handleEmailChange} />
+                </label>
+              </div>
+              <div className="input__container">
+                <label>
+                  Phone number:{" "}
+                  <input
+                    value={phoneNumber}
+                    onChange={handlePhoneNumberChange}
+                  />
+                </label>
+              </div>
             </>
           )}
         </div>
 
         <div className="education-exp">
           <h3>Educational Experience</h3>
-          <button onClick={handleEditEducationClick}>
+          <button className="expand-btn" onClick={handleEditEducationClick}>
             {" "}
             {editEducation ? "Submit" : "Edit"}{" "}
           </button>
           {editEducation && (
             <>
-              <label>
-                School name:{" "}
-                <input value={schoolName} onChange={handleSchoolNameChange} />
-              </label>
-              <label>
-                Field of study:{" "}
-                <input
-                  value={fieldOfStudy}
-                  onChange={handleFieldOfStudyChange}
-                />
-              </label>
-              <label>
-                Years of study:{" "}
-                <input
-                  value={yearsOfStudy}
-                  onChange={handleYearsOfStudyChange}
-                />
-              </label>
+              <div className="input__container">
+                <label>
+                  School name:{" "}
+                  <input value={schoolName} onChange={handleSchoolNameChange} />
+                </label>
+              </div>
+              <div className="input__container">
+                <label>
+                  Field of study:{" "}
+                  <input
+                    value={fieldOfStudy}
+                    onChange={handleFieldOfStudyChange}
+                  />
+                </label>
+              </div>
+              <div className="input__container">
+                <label>
+                  Years of study:{" "}
+                  <input
+                    value={yearsOfStudy}
+                    onChange={handleYearsOfStudyChange}
+                  />
+                </label>
+              </div>
             </>
           )}
         </div>
 
         <div className="practical-exp">
           <h3>Practical Experience</h3>
-          <button onClick={handleEditExperienceClick}>
+          <button className="expand-btn" onClick={handleEditExperienceClick}>
             {" "}
             {editExperience ? "Submit" : "Edit"}{" "}
           </button>
           {editExperience && (
             <>
-              <label>
-                Company name:{" "}
-                <input value={companyName} onChange={handleCompanyNameChange} />
-              </label>
-              <label>
-                Position title:{" "}
-                <input
-                  value={positionTitle}
-                  onChange={handlePositionTitleChange}
-                />
-              </label>
+              <div className="input__container">
+                <label>
+                  Company name:{" "}
+                  <input
+                    value={companyName}
+                    onChange={handleCompanyNameChange}
+                  />
+                </label>
+              </div>
+
+              <div className="input__container">
+                <label>
+                  Position title:{" "}
+                  <input
+                    value={positionTitle}
+                    onChange={handlePositionTitleChange}
+                  />
+                </label>
+              </div>
               <label>
                 Responsibilities:{" "}
-                <textarea
-                  value={responsibilities}
-                  onChange={handleResponsibilitiesChange}
-                />
+                <div className="input__container">
+                  <textarea
+                    className="textarea"
+                    value={responsibilities}
+                    onChange={handleResponsibilitiesChange}
+                  />
+                </div>
               </label>
             </>
           )}
