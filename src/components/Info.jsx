@@ -126,8 +126,8 @@ export default function Info() {
       </div>
       */}
 
-      <div class="user-input">
-        <div class="general-info">
+      <div className="user-input">
+        <div className="general-info">
           <h3>General Info</h3>
           {/* expand or collapse the "General Info" section on button click using a useState */}
           <button onClick={handleEditGeneralInfoClick}>
@@ -155,7 +155,7 @@ export default function Info() {
           )}
         </div>
 
-        <div class="education-exp">
+        <div className="education-exp">
           <h3>Educational Experience</h3>
           <button onClick={handleEditEducationClick}>
             {" "}
@@ -185,7 +185,7 @@ export default function Info() {
           )}
         </div>
 
-        <div class="practical-exp">
+        <div className="practical-exp">
           <h3>Practical Experience</h3>
           <button onClick={handleEditExperienceClick}>
             {" "}
