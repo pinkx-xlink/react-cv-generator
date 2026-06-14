@@ -35,16 +35,16 @@ export default function Info() {
   const [editEducation, setEditEducation] = useState(false);
   const [editExperience, setEditExperience] = useState(false);
 
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [schoolName, setSchoolName] = useState("");
-  const [fieldOfStudy, setFieldOfStudy] = useState("");
-  const [yearsOfStudy, setYearsOfStudy] = useState("");
-  const [companyName, setCompanyName] = useState("");
-  const [positionTitle, setPositionTitle] = useState("");
-  const [responsibilities, setResponsibilities] = useState("");
+  const [firstName, setFirstName] = useState("Jane");
+  const [lastName, setLastName] = useState("Doe");
+  const [email, setEmail] = useState("jane.doe@example.com");
+  const [phoneNumber, setPhoneNumber] = useState("+1234567890");
+  const [schoolName, setSchoolName] = useState("My School");
+  const [fieldOfStudy, setFieldOfStudy] = useState("My Field of Study");
+  const [yearsOfStudy, setYearsOfStudy] = useState("Years of Study");
+  const [companyName, setCompanyName] = useState("Company Name");
+  const [positionTitle, setPositionTitle] = useState("Position Title");
+  const [responsibilities, setResponsibilities] = useState("Responsibilities");
 
   const fullName = firstName + " " + lastName;
 
