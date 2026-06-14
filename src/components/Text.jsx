@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../styles/Text.css";
+import "./styles/Text.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import { Button } from "react-bootstrap/Button";
 // import { ThemeProvider } from "react-bootstrap";

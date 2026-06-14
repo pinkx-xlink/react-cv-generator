@@ -1,5 +1,5 @@
 import { useReducer, useRef } from "react";
-import "../styles/InputFieldsList.css";
+import "./styles/InputFieldsList.css";
 import { initialState } from "./infoReducer";
 
 export default function InputFieldsList({ inputFields, selectedId, dispatch }) {
