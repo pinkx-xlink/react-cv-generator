@@ -281,16 +281,19 @@ export default function Info() {
           <p>{fieldOfStudy}</p>
           <p>{yearsOfStudy}</p>
           <h3>Practical Experience</h3>
-          <p>{companyName}</p>
-          <p>{positionTitle}</p>
-          <p>Responsibilities:</p>
-          <ul>
-            {responsibilities.map((responsibility, index) => (
-              <li className="list-item list-disc" key={index}>
-                {responsibility}
-              </li>
-            ))}
-          </ul>
+
+          <div className="cv-form__experience1">
+            <span className="flex gap-2">
+              <h2>{positionTitle} </h2> <p>@</p> <h2>{companyName}</h2>
+            </span>
+            <ul>
+              {responsibilities.map((responsibility, index) => (
+                <li className="list-item list-disc" key={index}>
+                  {responsibility}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </div>
