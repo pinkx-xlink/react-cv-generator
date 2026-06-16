@@ -39,6 +39,9 @@ export default function Info() {
   const [lastName, setLastName] = useState("Doe");
   const [email, setEmail] = useState("jane.doe@example.com");
   const [phoneNumber, setPhoneNumber] = useState("+1234567890");
+  const [summary, setSummary] = useState(
+    "Software Engineer with 5 years of experience in developing scalable applications.",
+  );
   const [schoolName, setSchoolName] = useState("University of Example");
   const [fieldOfStudy, setFieldOfStudy] = useState("Computer Science");
   const [yearsOfStudy, setYearsOfStudy] = useState("2020 - 2024");
@@ -76,6 +79,10 @@ export default function Info() {
 
   function handlePhoneNumberChange(e) {
     setPhoneNumber(e.target.value);
+  }
+
+  function handleSummaryChange(e) {
+    setSummary(e.target.value);
   }
 
   function handleSchoolNameChange(e) {
@@ -159,6 +166,16 @@ export default function Info() {
                     value={phoneNumber}
                     onChange={handlePhoneNumberChange}
                   />
+                </label>
+              </div>
+
+              <div className="input__container">
+                <label>
+                  Summary:{" "}
+                  <textarea
+                    value={summary}
+                    onChange={handleSummaryChange}
+                  ></textarea>
                 </label>
               </div>
             </>
@@ -254,7 +271,10 @@ export default function Info() {
         </div>
 
         <div className="cv-form-body">
-          <h3>Educational Experience</h3>
+          <h3>Summary</h3>
+          <p>{summary}</p>
+
+          <h3>Education</h3>
           <p>
             <b>{schoolName}</b>
           </p>

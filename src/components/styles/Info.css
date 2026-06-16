@@ -19,7 +19,7 @@
   .input__container {
     margin-bottom: 10px;
     background-color: #f9f9f9;
-    color: purple;
+    /* color: purple; */
     width: 100%;
 
     label {
@@ -27,6 +27,13 @@
       flex-direction: column;
       flex-wrap: wrap;
       flex: 1;
+      font-weight: bold;
+
+      input,
+      textarea {
+        font-style: normal;
+        font-weight: normal;
+      }
     }
   }
 }
@@ -43,6 +50,13 @@
   flex-direction: column;
   flex: 1;
   border: 1px solid #ccc;
+
+  h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-style: italic;
+  }
 }
 
 .cv-header {
