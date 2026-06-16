@@ -222,16 +222,19 @@ export default function Info() {
                   />
                 </label>
               </div>
-              <label>
-                Responsibilities:{" "}
-                <div className="input__container">
-                  <textarea
-                    className="textarea"
-                    value={responsibilities}
-                    onChange={handleResponsibilitiesChange}
-                  />
-                </div>
-              </label>
+
+              <div className="input__container">
+                <label>
+                  Responsibilities:{" "}
+                  <div className="input__container">
+                    <textarea
+                      className="w-full"
+                      value={responsibilities}
+                      onChange={handleResponsibilitiesChange}
+                    />
+                  </div>
+                </label>
+              </div>
             </>
           )}
         </div>
@@ -242,7 +245,7 @@ export default function Info() {
         <div className="cv-header">
           <h2 className="cv-header__title">{fullName}</h2>
           <span className="cv-header__contact w-full">
-            <p>{phoneNumber}</p> <p>{email}</p>
+            <p>📞{phoneNumber}</p> <p>📧 {email}</p>
           </span>
         </div>
 
