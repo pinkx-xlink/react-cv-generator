@@ -39,12 +39,16 @@ export default function Info() {
   const [lastName, setLastName] = useState("Doe");
   const [email, setEmail] = useState("jane.doe@example.com");
   const [phoneNumber, setPhoneNumber] = useState("+1234567890");
-  const [schoolName, setSchoolName] = useState("My School");
-  const [fieldOfStudy, setFieldOfStudy] = useState("My Field of Study");
-  const [yearsOfStudy, setYearsOfStudy] = useState("Years of Study");
-  const [companyName, setCompanyName] = useState("Company Name");
-  const [positionTitle, setPositionTitle] = useState("Position Title");
-  const [responsibilities, setResponsibilities] = useState("Responsibilities");
+  const [schoolName, setSchoolName] = useState("University of Example");
+  const [fieldOfStudy, setFieldOfStudy] = useState("Computer Science");
+  const [yearsOfStudy, setYearsOfStudy] = useState("2020 - 2024");
+  const [companyName, setCompanyName] = useState("NASA");
+  const [positionTitle, setPositionTitle] = useState("Professional Cool Guy");
+  const [responsibilities, setResponsibilities] = useState([
+    "Manage projects",
+    "Collaborate with team members",
+    "Present findings to stakeholders",
+  ]);
 
   const fullName = firstName + " " + lastName;
 
@@ -95,7 +99,7 @@ export default function Info() {
   }
 
   function handleResponsibilitiesChange(e) {
-    setResponsibilities(e.target.value);
+    setResponsibilities(e.target.value.split(","));
   }
   return (
     <div className="info">
@@ -260,7 +264,13 @@ export default function Info() {
           <p>{companyName}</p>
           <p>{positionTitle}</p>
           <p>Responsibilities:</p>
-          <li>{responsibilities}</li>
+          <ul>
+            {responsibilities.map((responsibility, index) => (
+              <li className="list-item list-disc" key={index}>
+                {responsibility}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>

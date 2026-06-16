@@ -4,29 +4,17 @@
   src: url("./Quicksand/Quicksand-VariableFont_wght.ttf") format("truetype");
 }
 
-.App {
+/* looks more old-school formal */
+/* .App {
   text-align: center;
   font-family: "Quicksand";
-}
+  background-color: #f0f0f0;
+  padding: 20px;
+} */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 10vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
+.App {
+  background-color: #f0f0f0;
+  padding: 20px;
 }
 
 .buttons-and-input-container {
