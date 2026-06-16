@@ -141,25 +141,25 @@ export default function Info() {
             {editGeneralInfo ? "Submit ✓" : "Edit General Info ↓"}{" "}
           </button>
           {editGeneralInfo && (
-            <ul className="info-dropdown-content">
-              <li className="input__container">
+            <>
+              <div className="input__container">
                 <label>
                   First name:{" "}
                   <input value={firstName} onChange={handleFirstNameChange} />
                 </label>
-              </li>
-              <li className="input__container">
+              </div>
+              <div className="input__container">
                 <label>
                   Last name:{" "}
                   <input value={lastName} onChange={handleLastNameChange} />
                 </label>
-              </li>
-              <li className="input__container">
+              </div>
+              <div className="input__container">
                 <label>
                   Email: <input value={email} onChange={handleEmailChange} />
                 </label>
-              </li>
-              <li className="input__container">
+              </div>
+              <div className="input__container">
                 <label>
                   Phone number:{" "}
                   <input
@@ -167,7 +167,7 @@ export default function Info() {
                     onChange={handlePhoneNumberChange}
                   />
                 </label>
-              </li>
+              </div>
 
               <div className="input__container">
                 <label>
@@ -178,7 +178,7 @@ export default function Info() {
                   ></textarea>
                 </label>
               </div>
-            </ul>
+            </>
           )}
         </div>
 

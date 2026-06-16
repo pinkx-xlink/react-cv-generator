@@ -38,28 +38,6 @@
   }
 }
 
-.info-dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.info-dropdown-content {
-  /* Crucial properties for the animation */
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-  transition:
-    opacity 0.3s ease,
-    transform 0.3s ease,
-    visibility 0.3s;
-}
-/* Visible state triggered when hovering over the container */
-.info-dropdown:hover .info-dropdown-content {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
 .user-input {
   display: flex;
   flex-direction: column;
