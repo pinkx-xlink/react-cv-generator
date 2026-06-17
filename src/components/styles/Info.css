@@ -7,6 +7,10 @@
   width: 100%;
   color: white;
   font-weight: bold;
+
+  &:hover {
+    background-color: #b02a63;
+  }
 }
 
 .download-btn {
