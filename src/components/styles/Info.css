@@ -1,4 +1,5 @@
-.expand-btn {
+.expand-btn,
+.download-btn {
   background-color: #d3307c;
   border: none;
   padding: 10px 20px;
@@ -6,6 +7,10 @@
   width: 100%;
   color: white;
   font-weight: bold;
+}
+
+.download-btn {
+  display: block;
 }
 
 .info {

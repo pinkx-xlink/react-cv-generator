@@ -57,12 +57,15 @@ export default function Info() {
 
   function handleEditGeneralInfoClick() {
     setEditGeneralInfo(!editGeneralInfo);
+    // add dropdown functionality here
   }
   function handleEditEducationClick() {
     setEditEducation(!editEducation);
+    // add dropdown functionality here
   }
   function handleEditExperienceClick() {
     setEditExperience(!editExperience);
+    // add dropdown functionality here
   }
 
   function handleFirstNameChange(e) {
@@ -109,9 +112,10 @@ export default function Info() {
     setResponsibilities(e.target.value.split(","));
   }
   return (
-    <div className="info">
-      {/* THIS IS THE OLD INPUT FIELDS LIST */}
-      {/*
+    <>
+      <div className="info">
+        {/* THIS IS THE OLD INPUT FIELDS LIST */}
+        {/*
       <div className="buttons-and-input-container">
         <InputFieldsList
           inputFields={inputFields}
@@ -133,169 +137,177 @@ export default function Info() {
       </div>
       */}
 
-      <div className="user-input flex flex-col">
-        <div className="info-dropdown general-info">
-          {/* expand or collapse the "General Info" section on button click using a useState */}
-          <button className="expand-btn" onClick={handleEditGeneralInfoClick}>
-            {" "}
-            {editGeneralInfo ? "Submit ✓" : "Edit General Info ↓"}{" "}
-          </button>
-          {editGeneralInfo && (
-            <>
-              <div className="input__container">
-                <label>
-                  First name:{" "}
-                  <input value={firstName} onChange={handleFirstNameChange} />
-                </label>
-              </div>
-              <div className="input__container">
-                <label>
-                  Last name:{" "}
-                  <input value={lastName} onChange={handleLastNameChange} />
-                </label>
-              </div>
-              <div className="input__container">
-                <label>
-                  Email: <input value={email} onChange={handleEmailChange} />
-                </label>
-              </div>
-              <div className="input__container">
-                <label>
-                  Phone number:{" "}
-                  <input
-                    value={phoneNumber}
-                    onChange={handlePhoneNumberChange}
-                  />
-                </label>
-              </div>
-
-              <div className="input__container">
-                <label>
-                  Summary:{" "}
-                  <textarea
-                    value={summary}
-                    onChange={handleSummaryChange}
-                  ></textarea>
-                </label>
-              </div>
-            </>
-          )}
-        </div>
-
-        <div className="info-dropdown education-exp">
-          <button className="expand-btn" onClick={handleEditEducationClick}>
-            {" "}
-            {editEducation ? "Submit ✓" : "Edit Education ↓"}{" "}
-          </button>
-          {editEducation && (
-            <>
-              <div className="input__container">
-                <label>
-                  School name:{" "}
-                  <input value={schoolName} onChange={handleSchoolNameChange} />
-                </label>
-              </div>
-              <div className="input__container">
-                <label>
-                  Field of study:{" "}
-                  <input
-                    value={fieldOfStudy}
-                    onChange={handleFieldOfStudyChange}
-                  />
-                </label>
-              </div>
-              <div className="input__container">
-                <label>
-                  Years of study:{" "}
-                  <input
-                    value={yearsOfStudy}
-                    onChange={handleYearsOfStudyChange}
-                  />
-                </label>
-              </div>
-            </>
-          )}
-        </div>
-
-        <div className="info-dropdown practical-exp">
-          <button className="expand-btn" onClick={handleEditExperienceClick}>
-            {" "}
-            {editExperience ? "Submit ✓" : "Edit Work Experience ↓"}{" "}
-          </button>
-          {editExperience && (
-            <>
-              <div className="input__container">
-                <label>
-                  Company name:{" "}
-                  <input
-                    value={companyName}
-                    onChange={handleCompanyNameChange}
-                  />
-                </label>
-              </div>
-
-              <div className="input__container">
-                <label>
-                  Position title:{" "}
-                  <input
-                    value={positionTitle}
-                    onChange={handlePositionTitleChange}
-                  />
-                </label>
-              </div>
-
-              <div className="input__container">
-                <label>
-                  Responsibilities:{" "}
-                  <div className="input__container">
-                    <textarea
-                      className="w-full"
-                      value={responsibilities}
-                      onChange={handleResponsibilitiesChange}
+        <div className="user-input flex flex-col">
+          <div className="info-dropdown general-info">
+            {/* expand or collapse the "General Info" section on button click using a useState */}
+            <button className="expand-btn" onClick={handleEditGeneralInfoClick}>
+              {" "}
+              {editGeneralInfo ? "Submit ✓" : "Edit General Info ↓"}{" "}
+            </button>
+            {editGeneralInfo && (
+              <>
+                <div className="input__container">
+                  <label>
+                    First name:{" "}
+                    <input value={firstName} onChange={handleFirstNameChange} />
+                  </label>
+                </div>
+                <div className="input__container">
+                  <label>
+                    Last name:{" "}
+                    <input value={lastName} onChange={handleLastNameChange} />
+                  </label>
+                </div>
+                <div className="input__container">
+                  <label>
+                    Email: <input value={email} onChange={handleEmailChange} />
+                  </label>
+                </div>
+                <div className="input__container">
+                  <label>
+                    Phone number:{" "}
+                    <input
+                      value={phoneNumber}
+                      onChange={handlePhoneNumberChange}
                     />
-                  </div>
-                </label>
-              </div>
-            </>
-          )}
-        </div>
-      </div>
+                  </label>
+                </div>
 
-      {/* THE CV RETURNED USING THE FORM DATA */}
-      <div className="cv-form">
-        <div className="cv-header">
-          <h2 className="cv-header__title">{fullName}</h2>
-          <span className="cv-header__contact w-full">
-            <p>📞{phoneNumber}</p> <p>📧 {email}</p>
-          </span>
-        </div>
+                <div className="input__container">
+                  <label>
+                    Summary:{" "}
+                    <textarea
+                      value={summary}
+                      onChange={handleSummaryChange}
+                    ></textarea>
+                  </label>
+                </div>
+              </>
+            )}
+          </div>
 
-        <div className="cv-form-body">
-          <h3>Summary</h3>
-          <p>{summary}</p>
+          <div className="info-dropdown education-exp">
+            <button className="expand-btn" onClick={handleEditEducationClick}>
+              {" "}
+              {editEducation ? "Submit ✓" : "Edit Education ↓"}{" "}
+            </button>
+            {editEducation && (
+              <>
+                <div className="input__container">
+                  <label>
+                    School name:{" "}
+                    <input
+                      value={schoolName}
+                      onChange={handleSchoolNameChange}
+                    />
+                  </label>
+                </div>
+                <div className="input__container">
+                  <label>
+                    Field of study:{" "}
+                    <input
+                      value={fieldOfStudy}
+                      onChange={handleFieldOfStudyChange}
+                    />
+                  </label>
+                </div>
+                <div className="input__container">
+                  <label>
+                    Years of study:{" "}
+                    <input
+                      value={yearsOfStudy}
+                      onChange={handleYearsOfStudyChange}
+                    />
+                  </label>
+                </div>
+              </>
+            )}
+          </div>
 
-          <h3>Education</h3>
-          <p>
-            <b>{schoolName}</b>
-          </p>
-          <p>{fieldOfStudy}</p>
-          <p>{yearsOfStudy}</p>
-          <h3>Practical Experience</h3>
+          <div className="info-dropdown practical-exp">
+            <button className="expand-btn" onClick={handleEditExperienceClick}>
+              {" "}
+              {editExperience ? "Submit ✓" : "Edit Work Experience ↓"}{" "}
+            </button>
+            {editExperience && (
+              <>
+                <div className="input__container">
+                  <label>
+                    Company name:{" "}
+                    <input
+                      value={companyName}
+                      onChange={handleCompanyNameChange}
+                    />
+                  </label>
+                </div>
 
-          <div className="cv-form__experience1">
-            <span className="flex gap-2">
-              <h2>{positionTitle} </h2> <p>@</p> <h2>{companyName}</h2>
-            </span>
-            <ul>
-              {responsibilities.map((responsibility, index) => (
-                <li className="list-item list-disc" key={index}>
-                  {responsibility}
-                </li>
-              ))}
-            </ul>
+                <div className="input__container">
+                  <label>
+                    Position title:{" "}
+                    <input
+                      value={positionTitle}
+                      onChange={handlePositionTitleChange}
+                    />
+                  </label>
+                </div>
+
+                <div className="input__container">
+                  <label>
+                    Responsibilities:{" "}
+                    <div className="input__container">
+                      <textarea
+                        className="w-full"
+                        value={responsibilities}
+                        onChange={handleResponsibilitiesChange}
+                      />
+                    </div>
+                  </label>
+                </div>
+              </>
+            )}
           </div>
         </div>
+
+        {/* THE CV RETURNED USING THE FORM DATA */}
+        <div className="cv-form__container">
+          <div className="cv-form">
+            <div className="cv-header">
+              <h2 className="cv-header__title">{fullName}</h2>
+              <span className="cv-header__contact w-full">
+                <p>📞{phoneNumber}</p> <p>📧 {email}</p>
+              </span>
+            </div>
+
+            <div className="cv-form-body">
+              <h3>Summary</h3>
+              <p>{summary}</p>
+
+              <h3>Education</h3>
+              <p>
+                <b>{schoolName}</b>
+              </p>
+              <p>{fieldOfStudy}</p>
+              <p>{yearsOfStudy}</p>
+              <h3>Practical Experience</h3>
+
+              <div className="cv-form__experience1">
+                <span className="flex gap-2">
+                  <h2>{positionTitle} </h2> <p>@</p> <h2>{companyName}</h2>
+                </span>
+                <ul>
+                  {responsibilities.map((responsibility, index) => (
+                    <li className="list-item list-disc" key={index}>
+                      {responsibility}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <button className="download-btn">Download CV</button>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
