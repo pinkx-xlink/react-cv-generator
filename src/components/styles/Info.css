@@ -13,6 +13,21 @@
   }
 }
 
+.clear-btn {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  width: 100px;
+  color: red;
+  font-weight: bold;
+
+  &:hover {
+    background-color: #ccc;
+  }
+}
+
 .info {
   display: flex;
   flex-direction: row;

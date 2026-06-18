@@ -3,6 +3,7 @@ import { useState, useReducer } from "react";
 // import InputFieldsList from "./InputFieldsList";
 import infoReducer, { initialState } from "./infoReducer";
 import "./styles/Info.css";
+import Button from "./Button";
 
 const inputFields = [
   { id: 0, name: "General Info" },
@@ -120,7 +121,24 @@ export default function Info() {
   }
   return (
     <>
-      <button>Clear</button>
+      <button
+        className="clear-btn"
+        onClick={() => {
+          setFirstName("");
+          setLastName("");
+          setEmail("");
+          setPhoneNumber("");
+          setSummary("");
+          setSchoolName("");
+          setFieldOfStudy("");
+          setYearsOfStudy("");
+          setCompanyName("");
+          setPositionTitle("");
+          setResponsibilities([]);
+        }}
+      >
+        Clear
+      </button>
       <div className="info">
         {/* THIS IS THE OLD INPUT FIELDS LIST */}
         {/*
