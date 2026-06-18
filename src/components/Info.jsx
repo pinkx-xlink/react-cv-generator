@@ -45,7 +45,8 @@ export default function Info() {
   );
   const [schoolName, setSchoolName] = useState("University of Example");
   const [fieldOfStudy, setFieldOfStudy] = useState("Computer Science");
-  const [yearsOfStudy, setYearsOfStudy] = useState("2020 - 2024");
+  const [startYearOfStudy, setStartYearOfStudy] = useState("2020");
+  const [endYearOfStudy, setEndYearOfStudy] = useState("2024");
   const [companyName, setCompanyName] = useState("NASA");
   const [positionTitle, setPositionTitle] = useState("Professional Cool Guy");
   const [responsibilities, setResponsibilities] = useState([
@@ -104,8 +105,12 @@ export default function Info() {
     setFieldOfStudy(e.target.value);
   }
 
-  function handleYearsOfStudyChange(e) {
-    setYearsOfStudy(e.target.value);
+  function handleStartYearOfStudyChange(e) {
+    setStartYearOfStudy(e.target.value);
+  }
+
+  function handleEndYearOfStudyChange(e) {
+    setEndYearOfStudy(e.target.value);
   }
 
   function handleCompanyNameChange(e) {
@@ -132,7 +137,8 @@ export default function Info() {
             setSummary("");
             setSchoolName("");
             setFieldOfStudy("");
-            setYearsOfStudy("");
+            setStartYearOfStudy("");
+            setEndYearOfStudy("");
             setCompanyName("");
             setPositionTitle("");
             setResponsibilities([]);
@@ -153,7 +159,8 @@ export default function Info() {
             );
             setSchoolName("University of Example");
             setFieldOfStudy("Computer Science");
-            setYearsOfStudy("4");
+            setStartYearOfStudy("2020");
+            setEndYearOfStudy("2024");
             setCompanyName("Example Corp");
             setPositionTitle("Software Engineer");
             setResponsibilities([
@@ -267,10 +274,19 @@ export default function Info() {
                 </div>
                 <div className="input__container">
                   <label>
-                    Years of study:{" "}
+                    Starting year:{" "}
                     <input
-                      value={yearsOfStudy}
-                      onChange={handleYearsOfStudyChange}
+                      value={startYearOfStudy}
+                      onChange={handleStartYearOfStudyChange}
+                    />
+                  </label>
+                </div>
+                <div className="input__container">
+                  <label>
+                    End year:{" "}
+                    <input
+                      value={endYearOfStudy}
+                      onChange={handleEndYearOfStudyChange}
                     />
                   </label>
                 </div>
@@ -341,7 +357,9 @@ export default function Info() {
                 <b>{schoolName}</b>
               </p>
               <p>{fieldOfStudy}</p>
-              <p>{yearsOfStudy}</p>
+              <p>
+                {startYearOfStudy} - {endYearOfStudy}
+              </p>
               <h3>Practical Experience</h3>
 
               <div className="cv-form__experience1">
