@@ -53,11 +53,18 @@ export default function Info() {
     "Present findings to stakeholders",
   ]);
 
+  // const [isOpen, setIsOpen] = useState(false);
+
+  // const toggleDropdown = () => {
+  //   setIsOpen(!isOpen);
+  // };
+
   const fullName = firstName + " " + lastName;
 
   function handleEditGeneralInfoClick() {
     setEditGeneralInfo(!editGeneralInfo);
     // add dropdown functionality here
+    toggleDropdown();
   }
   function handleEditEducationClick() {
     setEditEducation(!editEducation);
