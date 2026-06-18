@@ -301,7 +301,7 @@ export default function Info() {
                 <span className="flex gap-2">
                   <h2>{positionTitle} </h2> <p>@</p> <h2>{companyName}</h2>
                 </span>
-                <ul>
+                <ul className="pl-5">
                   {responsibilities.map((responsibility, index) => (
                     <li className="list-item list-disc" key={index}>
                       {responsibility}
