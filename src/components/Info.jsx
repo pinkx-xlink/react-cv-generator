@@ -139,7 +139,7 @@ export default function Info() {
       >
         Clear
       </button>
-      <div className="info">
+      <div className="info grid grid-cols-1 gap-4">
         {/* THIS IS THE OLD INPUT FIELDS LIST */}
         {/*
       <div className="buttons-and-input-container">
@@ -295,7 +295,7 @@ export default function Info() {
         </div>
 
         {/* THE CV RETURNED USING THE FORM DATA */}
-        <div className="cv-form__container">
+        <div className="cv-form__container w-full">
           <div className="cv-form">
             <div className="cv-header">
               <h2 className="cv-header__title">{fullName}</h2>
