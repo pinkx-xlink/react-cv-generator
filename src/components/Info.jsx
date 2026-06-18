@@ -39,18 +39,18 @@ export default function Info() {
   const [firstName, setFirstName] = useState("Jane");
   const [lastName, setLastName] = useState("Doe");
   const [email, setEmail] = useState("jane.doe@example.com");
-  const [phoneNumber, setPhoneNumber] = useState("+1234567890");
+  const [phoneNumber, setPhoneNumber] = useState("123-456-7890");
   const [summary, setSummary] = useState(
-    "Software Engineer with 5 years of experience in developing scalable applications.",
+    "Experienced software developer with a passion for creating innovative solutions.",
   );
   const [schoolName, setSchoolName] = useState("University of Example");
   const [fieldOfStudy, setFieldOfStudy] = useState("Computer Science");
   const [startYearOfStudy, setStartYearOfStudy] = useState("2020");
   const [endYearOfStudy, setEndYearOfStudy] = useState("2024");
-  const [companyName, setCompanyName] = useState("NASA");
-  const [positionTitle, setPositionTitle] = useState("Professional Cool Guy");
+  const [companyName, setCompanyName] = useState("Example Corp");
+  const [positionTitle, setPositionTitle] = useState("Software Engineer");
   const [responsibilities, setResponsibilities] = useState([
-    "Manage projects",
+    "Develop and maintain software applications",
     "Collaborate with team members",
     "Present findings to stakeholders",
   ]);
@@ -150,9 +150,9 @@ export default function Info() {
         <button
           className="header-btn"
           onClick={() => {
-            setFirstName("John");
+            setFirstName("Jane");
             setLastName("Doe");
-            setEmail("john.doe@example.com");
+            setEmail("jane.doe@example.com");
             setPhoneNumber("123-456-7890");
             setSummary(
               "Experienced software developer with a passion for creating innovative solutions.",
@@ -364,7 +364,7 @@ export default function Info() {
 
               <div className="cv-form__experience1">
                 <span className="flex gap-2">
-                  <h2>{positionTitle} </h2> <p>@</p> <h2>{companyName}</h2>
+                  <h2>{positionTitle} </h2> - <h2>{companyName}</h2>
                 </span>
                 <ul className="pl-5">
                   {responsibilities.map((responsibility, index) => (
