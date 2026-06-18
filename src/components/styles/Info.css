@@ -13,10 +13,6 @@
   }
 }
 
-.download-btn {
-  display: block;
-}
-
 .info {
   display: flex;
   flex-direction: row;
