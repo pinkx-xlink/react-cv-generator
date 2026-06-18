@@ -139,6 +139,31 @@ export default function Info() {
       >
         Clear
       </button>
+
+      <button
+        onClick={() => {
+          setFirstName("John");
+          setLastName("Doe");
+          setEmail("john.doe@example.com");
+          setPhoneNumber("123-456-7890");
+          setSummary(
+            "Experienced software developer with a passion for creating innovative solutions.",
+          );
+          setSchoolName("University of Example");
+          setFieldOfStudy("Computer Science");
+          setYearsOfStudy("4");
+          setCompanyName("Example Corp");
+          setPositionTitle("Software Engineer");
+          setResponsibilities([
+            "Develop and maintain software applications",
+            "Collaborate with team members",
+            "Present findings to stakeholders",
+          ]);
+        }}
+      >
+        Load Example
+      </button>
+
       <div className="info grid grid-cols-1 gap-4">
         {/* THIS IS THE OLD INPUT FIELDS LIST */}
         {/*
