@@ -1,5 +1,5 @@
 import React from "react";
-import DropdownButton from "./DropdownButton";
+import Button from "./Button";
 import DropdownCard from "./DropdownCard";
 
 const DropdownMenu = () => {
@@ -28,7 +28,7 @@ const DropdownMenu = () => {
       ref={drop}
       style={{ position: "relative", margin: "16px" }}
     >
-      <DropdownButton onClick={() => setOpen((open) => !open)} />
+      <Button onClick={() => setOpen((open) => !open)} />
       {open && <DropdownCard data={myArray} />}
     </div>
   );

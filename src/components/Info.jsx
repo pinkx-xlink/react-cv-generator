@@ -120,6 +120,7 @@ export default function Info() {
   }
   return (
     <>
+      <button>Clear</button>
       <div className="info">
         {/* THIS IS THE OLD INPUT FIELDS LIST */}
         {/*
