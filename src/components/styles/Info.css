@@ -4,13 +4,16 @@
   border: none;
   padding: 10px 20px;
   cursor: pointer;
-  width: 100%;
   color: white;
   font-weight: bold;
 
   &:hover {
     background-color: #b02a63;
   }
+}
+
+.expand-btn {
+  width: 100%;
 }
 
 .clear-btn {

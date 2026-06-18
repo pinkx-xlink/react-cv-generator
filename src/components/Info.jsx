@@ -295,8 +295,8 @@ export default function Info() {
         </div>
 
         {/* THE CV RETURNED USING THE FORM DATA */}
-        <div className="cv-form__container w-full">
-          <div className="cv-form">
+        <div className="cv-form__container w-full ">
+          <div className="cv-form h-full mb-25">
             <div className="cv-header">
               <h2 className="cv-header__title">{fullName}</h2>
               <span className="cv-header__contact w-full">
@@ -330,9 +330,10 @@ export default function Info() {
               </div>
             </div>
           </div>
-
-          <button className="download-btn">Download CV</button>
         </div>
+      </div>
+      <div className="flex justify-center m-5">
+        <button className="download-btn">Download CV</button>
       </div>
     </>
   );
