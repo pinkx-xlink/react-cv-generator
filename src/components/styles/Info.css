@@ -15,16 +15,26 @@
 .expand-btn {
   width: 100%;
 }
+.header-btns {
+  width: 220px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
 
-.clear-btn {
+.header-btn {
   background-color: #fff;
   border: 1px solid #ccc;
   padding: 10px 20px;
   margin-top: 10px;
   cursor: pointer;
   width: 100px;
-  color: red;
+  height: 50px;
   font-weight: bold;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:hover {
     background-color: #ccc;
@@ -83,9 +93,12 @@
 
   h3 {
     font-size: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
+    margin-top: 10px;
     font-weight: bold;
     font-style: italic;
+    background-color: #f0f0f0;
+    text-align: center;
   }
 
   h2 {

@@ -121,48 +121,51 @@ export default function Info() {
   }
   return (
     <>
-      <button
-        className="clear-btn"
-        onClick={() => {
-          setFirstName("");
-          setLastName("");
-          setEmail("");
-          setPhoneNumber("");
-          setSummary("");
-          setSchoolName("");
-          setFieldOfStudy("");
-          setYearsOfStudy("");
-          setCompanyName("");
-          setPositionTitle("");
-          setResponsibilities([]);
-        }}
-      >
-        Clear
-      </button>
+      <div className="header-btns">
+        <button
+          className="header-btn clear-btn text-red-600"
+          onClick={() => {
+            setFirstName("");
+            setLastName("");
+            setEmail("");
+            setPhoneNumber("");
+            setSummary("");
+            setSchoolName("");
+            setFieldOfStudy("");
+            setYearsOfStudy("");
+            setCompanyName("");
+            setPositionTitle("");
+            setResponsibilities([]);
+          }}
+        >
+          Clear
+        </button>
 
-      <button
-        onClick={() => {
-          setFirstName("John");
-          setLastName("Doe");
-          setEmail("john.doe@example.com");
-          setPhoneNumber("123-456-7890");
-          setSummary(
-            "Experienced software developer with a passion for creating innovative solutions.",
-          );
-          setSchoolName("University of Example");
-          setFieldOfStudy("Computer Science");
-          setYearsOfStudy("4");
-          setCompanyName("Example Corp");
-          setPositionTitle("Software Engineer");
-          setResponsibilities([
-            "Develop and maintain software applications",
-            "Collaborate with team members",
-            "Present findings to stakeholders",
-          ]);
-        }}
-      >
-        Load Example
-      </button>
+        <button
+          className="header-btn"
+          onClick={() => {
+            setFirstName("John");
+            setLastName("Doe");
+            setEmail("john.doe@example.com");
+            setPhoneNumber("123-456-7890");
+            setSummary(
+              "Experienced software developer with a passion for creating innovative solutions.",
+            );
+            setSchoolName("University of Example");
+            setFieldOfStudy("Computer Science");
+            setYearsOfStudy("4");
+            setCompanyName("Example Corp");
+            setPositionTitle("Software Engineer");
+            setResponsibilities([
+              "Develop and maintain software applications",
+              "Collaborate with team members",
+              "Present findings to stakeholders",
+            ]);
+          }}
+        >
+          Load Example
+        </button>
+      </div>
 
       <div className="info grid grid-cols-1 gap-4">
         {/* THIS IS THE OLD INPUT FIELDS LIST */}
